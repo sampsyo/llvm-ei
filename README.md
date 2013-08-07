@@ -11,6 +11,18 @@ But LLVM's interpreter isn't meant to be extended in this way. (The crucial meth
 [LLVM pass]: http://llvm.org/docs/WritingAnLLVMPass.html
 
 
+Requirements
+------------
+
+To use the extensible interpreter, you will need:
+
+* LLVM itself, built with `LLVM_ENABLE_FFI` turned on. To do this, pass the command-line option `-DLLVM_ENABLE_FFI:BOOL=ON` to `cmake` when building LLVM.
+* [libffi][].
+* The LLVM sources, since we use some header files that are not installed with the LLVM binaries.
+
+[libffi]: http://sourceware.org/libffi/
+
+
 A Demonstration
 ---------------
 

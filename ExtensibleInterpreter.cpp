@@ -1,5 +1,6 @@
 #include "ExtensibleInterpreter.h"
 #include <cerrno>
+#include "llvm/Support/DynamicLibrary.h"
 
 using namespace llvm;
 
@@ -51,6 +52,12 @@ int ExtensibleInterpreter::runMain(std::vector<std::string> args,
 
   // Reset errno to zero on entry to main.
   errno = 0;
+
+  std::string ErrorMsg;
+  if (sys::DynamicLibrary::LoadLibraryPermanently(0, &ErrorMsg)) {
+    errs() << "???\n";
+    return -1;
+  }
 
   // Run main.
   return runFunctionAsMain(EntryFn, args, envp);

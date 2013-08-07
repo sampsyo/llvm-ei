@@ -21,6 +21,7 @@ add_llvm_executable(trace
 set_target_properties(trace PROPERTIES 
     COMPILE_FLAGS "-fno-rtti -fvisibility-inlines-hidden"
 )
+target_link_libraries(trace ffi)
 
 # This allows our interpreter to include:
 # ExecutionEngine/Interpreter/Interpreter.h
