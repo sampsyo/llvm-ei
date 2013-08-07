@@ -12,7 +12,7 @@ add_definitions(${LLVM_DEFINITIONS})
 include_directories(${LLVM_INCLUDE_DIRS})
 link_directories(${LLVM_LIBRARY_DIRS})
 
-set(LLVM_LINK_COMPONENTS mcjit jit interpreter nativecodegen bitreader asmparser selectiondag native)
+set(LLVM_LINK_COMPONENTS interpreter bitreader asmparser selectiondag irreader)
 set(LLVM_BUILD_TOOLS true)
 add_llvm_executable(trace
   trace.cpp

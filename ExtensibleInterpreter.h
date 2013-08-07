@@ -2,8 +2,9 @@
 #define EXTENSIBLE_INTERPRETER_H
 
 #include <vector>
-#include "llvm/Support/InstVisitor.h"
-#include "llvm/Support/IRReader.h"
+#include "llvm/InstVisitor.h"
+#include "llvm/IRReader/IRReader.h"
+#include "llvm/Support/SourceMgr.h"
 #include "ExecutionEngine/Interpreter/Interpreter.h"
 
 // This is a GIANT HACK that should NOT BE TRUSTED. I need access to the

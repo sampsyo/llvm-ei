@@ -17,7 +17,7 @@ A Demonstration
 Included in this repository is a demonstration, in `trace.cpp`. To build it, first edit the top of `CMakeLists.txt` to point to LLVM's installation prefix and its source directory (you'll need to [download the source][llvm download]). These are the lines you need to change:
 
     set(LLVM_PREFIX /usr)
-    set(LLVM_SRC_DIR ~/llvm-3.2)
+    set(LLVM_SRC_DIR ~/llvm-3.3)
 
 Then build the example with the usual [CMake][] dance:
 
